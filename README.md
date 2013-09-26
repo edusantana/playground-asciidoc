@@ -1,4 +1,4 @@
 playground-asciidoc
 ===================
 
-Asciidoc repository for testing it
+Asciidoc repository for testing it.
