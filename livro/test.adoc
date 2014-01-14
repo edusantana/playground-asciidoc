@@ -25,6 +25,9 @@ int void main(){
 
 ----
 
+.titulo da imagem
+image::images/charlie-chaplin.jpg[]
+
 [latexmath]
 ++++++++++++++++++++++++++++++++++++++++++++
 \begin{tikzpicture}[thick]
