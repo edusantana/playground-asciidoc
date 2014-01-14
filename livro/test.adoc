@@ -27,24 +27,22 @@ int void main(){
 
 [latexmath]
 ++++++++++++++++++++++++++++++++++++++++++++
-\[\sqrt[3]{3^{(5x+1)/3}}=\sqrt{9^{3(x+1)/5}}\]
+\begin{tikzpicture}[thick]
+  \node[draw,rectangle] (a) {A};
+  \node[inner sep=0,minimum size=0,right of=a] (k) {}; % invisible node
+  \node[draw,rectangle,right of=k] (b) {B};
+  \node[draw,rectangle,below of=a] (c) {C};
 
-\begin{figure}[ht]
-\begin{center}
-\begin{tikzpicture}
-  \node[font=\small]  at (-2.8,0.2) {programa};
-  \node (fnt) at (-2,0) {};
-  \node[font=\small] at (-2.8,-0.2) {fonte};
-  \draw[thick] (-0.9,0.6) rectangle node[font=\small] (cnt) {compilador} (1.5,-0.6);
-  \node[font=\small] at (3.3,0.2) {programa};
-  \node (dst) at (2.5,0) {};
-  \node[font=\small] at (3.3,-0.2) {destino};
-  \draw[->,shorten >=0.6pt] (fnt) -- (-0.9,0);
-  \draw[->] (1.5,0) -- (dst);
+  % 1st pass: draw arrows
+  \draw[vecArrow] (a) to (b);
+  \draw[vecArrow] (k) |- (c);
+
+  % 2nd pass: copy all from 1st pass, and replace vecArrow with innerWhite
+  \draw[innerWhite] (a) to (b);
+  \draw[innerWhite] (k) |- (c);
+
+  % Note: If you have no branches, the 2nd pass is not needed
 \end{tikzpicture}
-\end{center}
-\caption{Diagrama básico de um compilador} \label{fig:estbasic}
-\end{figure}
 ++++++++++++++++++++++++++++++++++++++++++++
 
 
