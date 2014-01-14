@@ -28,7 +28,7 @@ int void main(){
 .titulo da imagem
 image::images/charlie-chaplin.jpg[]
 
-[latexmath]
+[latex]
 ++++++++++++++++++++++++++++++++++++++++++++
 \begin{tikzpicture}[thick]
   \node[draw,rectangle] (a) {A};
